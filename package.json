@@ -10,20 +10,20 @@
     "accordion",
     "tree-view"
   ],
-  "homepage": "https://github.com/yourusername/sanity-plugin-hierarchical-structure#readme",
+  "homepage": "https://github.com/MathiasMyrold/sanity-plugin-hierarchical-structure#readme",
   "bugs": {
-    "url": "https://github.com/yourusername/sanity-plugin-hierarchical-structure/issues"
+    "url": "https://github.com/MathiasMyrold/sanity-plugin-hierarchical-structure/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/sanity-plugin-hierarchical-structure.git"
+    "url": "git+https://github.com/MathiasMyrold/sanity-plugin-hierarchical-structure.git"
   },
   "license": "MIT",
   "author": "Your Name <your.email@example.com>",
   "exports": {
     ".": {
       "types": "./dist/plugin.d.ts",
-      "source": "./plugin.ts",
+      "source": "./src/plugin.ts",
       "import": "./dist/plugin.esm.js",
       "require": "./dist/plugin.js",
       "default": "./dist/plugin.esm.js"
@@ -31,7 +31,7 @@
   },
   "main": "./dist/plugin.js",
   "module": "./dist/plugin.esm.js",
-  "source": "./plugin.ts",
+  "source": "./src/plugin.ts",
   "types": "./dist/plugin.d.ts",
   "files": [
     "dist",
