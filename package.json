@@ -19,26 +19,29 @@
     "url": "git+https://github.com/MathiasMyrold/sanity-plugin-hierarchical-structure.git"
   },
   "license": "MIT",
+  "type": "module",
   "author": "Your Name <your.email@example.com>",
   "exports": {
     ".": {
-      "types": "./dist/plugin.d.ts",
-      "source": "./src/plugin.ts",
-      "import": "./dist/plugin.esm.js",
-      "require": "./dist/plugin.js",
-      "default": "./dist/plugin.esm.js"
-    }
+      "source": "./src/index.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.esm.js"
+    },
+    "./package.json": "./package.json"
   },
-  "main": "./dist/plugin.js",
-  "module": "./dist/plugin.esm.js",
-  "source": "./src/plugin.ts",
-  "types": "./dist/plugin.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.esm.d.ts",
+  "sideEffects": false,
+  "browserslist": "extends @sanity/browserslist-config",
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
-    "build": "plugin-kit verify-package --silent && pkg-utils build --strict && pkg-utils --strict",
+    "build": "plugin-kit verify-package --silent && pkg-utils build --strict --check --clean",
+    "link-watch": "plugin-kit link-watch",
     "lint": "eslint .",
     "prepublishOnly": "npm run build",
     "watch": "pkg-utils watch --strict"
@@ -49,6 +52,7 @@
     "@sanity/ui": "^2.0.0 || ^3.0.0"
   },
   "devDependencies": {
+    "@sanity/browserslist-config": "^1.0.5",
     "@sanity/pkg-utils": "^6.0.0",
     "@sanity/plugin-kit": "^4.0.0",
     "@types/react": "^19.0.0",
@@ -64,5 +68,11 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "sanityPlugin": {
+    "verifyPackage": {
+      "sanityV2Json": false,
+      "eslintImports": false
+    }
   }
 }

@@ -45,6 +45,7 @@ export type {
 
 /**
  * Creates a hierarchical list item for the structure tool
+ * @public
  */
 export function createHierarchicalListItem(
   S: StructureBuilder,
@@ -96,6 +97,7 @@ export function createHierarchicalListItem(
  *     ])
  * }
  * ```
+ * @public
  */
 export function createHierarchicalStructure(
   S: StructureBuilder,

@@ -2,11 +2,13 @@
  * Configuration types for hierarchical document structure
  */
 
+/** @public */
 export type HierarchyDirection = 'forward' | 'reverse'
 
 /**
  * Forward hierarchy: Document type A has references to B, B has references to C
  * Reverse hierarchy: Find all documents of type B that reference document A
+ * @public
  */
 export interface HierarchyLevelConfig {
   /** The document type at this level */
@@ -17,6 +19,7 @@ export interface HierarchyLevelConfig {
   title?: string
 }
 
+/** @public */
 export interface HierarchicalStructureConfig {
   /** Unique ID for this hierarchy */
   id: string
