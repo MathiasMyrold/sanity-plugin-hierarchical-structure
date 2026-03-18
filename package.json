@@ -1,0 +1,68 @@
+{
+  "name": "sanity-plugin-hierarchical-structure",
+  "version": "1.0.0",
+  "description": "A Sanity Studio plugin for displaying documents in hierarchical accordion structures with forward and reverse relationships",
+  "keywords": [
+    "sanity",
+    "sanity-plugin",
+    "hierarchical",
+    "structure",
+    "accordion",
+    "tree-view"
+  ],
+  "homepage": "https://github.com/yourusername/sanity-plugin-hierarchical-structure#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/sanity-plugin-hierarchical-structure/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/sanity-plugin-hierarchical-structure.git"
+  },
+  "license": "MIT",
+  "author": "Your Name <your.email@example.com>",
+  "exports": {
+    ".": {
+      "types": "./dist/plugin.d.ts",
+      "source": "./plugin.ts",
+      "import": "./dist/plugin.esm.js",
+      "require": "./dist/plugin.js",
+      "default": "./dist/plugin.esm.js"
+    }
+  },
+  "main": "./dist/plugin.js",
+  "module": "./dist/plugin.esm.js",
+  "source": "./plugin.ts",
+  "types": "./dist/plugin.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "plugin-kit verify-package --silent && pkg-utils build --strict && pkg-utils --strict",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build",
+    "watch": "pkg-utils watch --strict"
+  },
+  "dependencies": {
+    "@sanity/icons": "^3.0.0",
+    "@sanity/incompatible-plugin": "^1.0.4",
+    "@sanity/ui": "^2.0.0 || ^3.0.0"
+  },
+  "devDependencies": {
+    "@sanity/pkg-utils": "^6.0.0",
+    "@sanity/plugin-kit": "^4.0.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-sanity": "^7.0.0",
+    "react": "^19.0.0",
+    "sanity": "^3.0.0 || ^5.0.0",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "sanity": "^3.0.0 || ^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
